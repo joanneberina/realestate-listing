@@ -12,12 +12,14 @@ body {
 main {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     margin-bottom: 2rem;
 }
 
 .heading {
+    padding-top: 3rem;
+    margin-left: 6.5rem;
     font-size: 1.5rem;
-    margin: 2rem 6rem;
 }
 
 .card {
@@ -28,6 +30,11 @@ main {
 }
 
 @media (min-width: 600px){
+
+    .heading {
+        margin: 0 auto;
+
+    }
     .card {
         display: flex;
         flex-direction: row;
@@ -53,6 +60,7 @@ main {
 
     .property {
         justify-content: space-around;
+        padding: 2rem 1rem;
     }
 
     .property-img {
@@ -115,6 +123,7 @@ span {
     .realtor {
         margin: auto 0;
         border-radius: 0 15px 15px 0;
+        padding: 0 2rem;
     }
 }
 
@@ -146,9 +155,19 @@ span {
     margin-bottom: .5rem;
 }
 
-.phone {
+.email {
+    display: none;
+}
+
+.phone, .email{
     color: #606F7B;
     font-size: 1rem;
     font-weight: 300;
 }
 
+@media (min-width: 600px) {
+
+    .email {
+        display: flex; 
+    }
+}
