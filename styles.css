@@ -9,29 +9,66 @@ body {
     font-weight: 600;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
 .heading {
-    font-size: 2rem;
-    margin: 2rem 4rem;
+    font-size: 1.5rem;
+    margin: 2rem 6rem;
 }
 
 .card {
     border-radius: 15px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    width: 500px;
-    margin: 0 4rem;
+    box-shadow: 0 10px 15px 3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    width: 320px;
+    margin: 2rem auto;
+}
+
+@media (min-width: 600px){
+    .card {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        height: 175px;
+    } 
 }
 
 .property {
     display: flex;
     flex-direction: column;
     background-color: #FFFFFF;
-    padding: 1rem;
+    padding: .5rem;
 }
 
 .property-img {
-    height: 300px;
+    height: 200px;
     overflow: hidden;
     border-radius: 15px 15px 0 0;
+}
+
+@media (min-width: 600px) {
+
+    .property {
+        justify-content: space-around;
+    }
+
+    .property-img {
+        width: 300px;
+        border-radius: 15px 0 0 15px;
+    }       
+
+    .property-img img {
+        height: 175px;
+        border-radius: 15px 0 0 15px;
+    }
+}
+
+.property-img img {
+    width: 100%;
+    object-fit: cover;
 }
 
 .details {
@@ -44,8 +81,8 @@ body {
 
 .details, .address {
     display: inline-flex;
-    margin: 1rem;
-    font-size: 1.5rem;
+    margin: .5rem;
+    font-size: 1rem;
     color: #606F7B;
 }
 
@@ -58,21 +95,33 @@ span {
 }
 
 .price {
-    font-size: 3.5rem;
+    font-size: 2rem;
     font-weight: 400;
-    margin: 0 1rem;
+    margin: 0 .5rem;
+}
+
+@media (min-width:600px) {
+    .price {
+        font-size: 2.5rem;
+    }
 }
 
 .realtor {
-    background-color: #F5F8FA;
     border-radius: 0 0 15px 15px;
-    padding: 1rem;
+    padding: .5rem;
+}
+
+@media (min-width: 600px) {
+    .realtor {
+        margin: auto 0;
+        border-radius: 0 15px 15px 0;
+    }
 }
 
 .realtor-info {
     display: flex;
     flex-direction: row;
-    padding: 1rem;
+    padding: .5rem;
 }
 
 .profile-img img {
@@ -86,17 +135,20 @@ span {
 }
 
 .subhead {
+    font-size: .75rem;
     color: #606F7B;
     letter-spacing: 1px;
-    padding: 1rem;
+    padding: .25rem;
 }
 
 .name {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    margin-bottom: .5rem;
 }
 
 .phone {
     color: #606F7B;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 300;
 }
+
